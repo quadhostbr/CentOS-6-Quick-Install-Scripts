@@ -32,5 +32,5 @@ done
 
 
 clear
-echo 'Ok.... apache, php e mysql esta instalado e em execução.'
+echo 'Ok.... apache, php e mysql esta instalado e em execucao.'
 echo 'Senha do usuario root MySQL:' $mysqlPassword 
