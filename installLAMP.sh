@@ -9,7 +9,7 @@ read -p "Repita a senha: " mysqlPasswordRetype
 
 yum install -y httpd php mysql mysql-server
 
-chkconfig mysql-server on
+chkconfig mysqld on
 chkconfig httpd on
 
 /etc/init.d/mysqld restart
