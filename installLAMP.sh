@@ -2,7 +2,7 @@
 
 clear
 
-echo 'Preparando para instalar o LAMP em sua máquina, aqui vamos nós ...'
+echo 'Preparando para instalar o LAMP em sua maquina, aqui vamos nos ...'
 echo '------------------------'
 read -p "Senha para o MySQL: " mysqlPassword
 read -p "Repita a senha: " mysqlPasswordRetype
@@ -15,7 +15,7 @@ chkconfig httpd on
 /etc/init.d/mysqld restart
 
 while [[ "$mysqlPassword" = "" && "$mysqlPassword" != "$mysqlPasswordRetype" ]]; do
-  echo -n "Por favor, informe uma senha para o usuário root do MySQL: "
+  echo -n "Por favor, informe uma senha para o usuario root do MySQL: "
   stty -echo
   read -r mysqlPassword
   echo
@@ -24,7 +24,7 @@ while [[ "$mysqlPassword" = "" && "$mysqlPassword" != "$mysqlPasswordRetype" ]];
   stty echo
   echo
   if [ "$mysqlPassword" != "$mysqlPasswordRetype" ]; then
-    echo "As senhas não coincidem!"
+    echo "As senhas nao coincidem!"
   fi
 done
 
@@ -32,5 +32,5 @@ done
 
 
 clear
-echo 'Ok.... apache, php e mysql está instalado, em execução.'
-echo 'Senha do usuário root MySQL:' $mysqlPassword 
+echo 'Ok.... apache, php e mysql esta instalado e em execução.'
+echo 'Senha do usuario root MySQL:' $mysqlPassword 
